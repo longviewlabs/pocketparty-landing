@@ -1,102 +1,309 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Users, Globe } from "lucide-react";
+import Logo from "@/components/Logo";
+import StoreBadges from "@/components/StoreBadges";
+import Benefits from "@/components/Benefits";
+import Testimonials from "@/components/Testimonials";
+import HeroVideo from "@/components/HeroVideo";
+import Pill from "@/components/Pill";
+
+
+
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="font-sans">
+      <main className="mx-auto max-w-6xl px-4 py-12 space-y-20">
+        {/* HERO */}
+        <section className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+              <span className="text-[#FFF845] font-extrabold">The world's best social games</span> <span className="italic">— in your pocket, free forever.</span>
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              150+ free games and activities — powering the world's largest offline social play movement for real connection.
+            </p>
+            <div id="download">
+              <StoreBadges />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
+                1.4M+ followers
+              </Pill>
+              <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
+                150+ games
+              </Pill>
+              <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
+                16 languages
+              </Pill>
+            </div>
+          </div>
+          <HeroVideo />
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+        {/* BENEFITS */}
+        <Benefits />
+
+        {/* TESTIMONIALS */}
+        <Testimonials />
+
+        {/* ABOUT / MISSION */}
+        <section id="about" className="mx-auto max-w-6xl px-4 md:px-6 scroll-mt-24">
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              Why we built Pocket Party
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              Our mission is simple: help people put their phones down and reconnect through real play.
+            </p>
+          </div>
+          
+          <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
+            {/* Left column: Photos */}
+            <div className="space-y-4">
+              <Image
+                src="/photo-game1.jpg"
+                alt="Friends playing Pocket Party game together"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-xl object-cover"
+                loading="lazy"
+              />
+              <Image
+                src="/photo-game2.jpg"
+                alt="Group enjoying offline activities with Pocket Party"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-xl object-cover"
+                loading="lazy"
+              />
+            </div>
+            
+            {/* Right column: Mission copy */}
+            <div className="space-y-8 text-base md:text-lg leading-relaxed">
+              <p>
+                <span className="font-bold text-[#FCEA10]">Scrolling isn't connection.</span><br />
+                We built Pocket Party to bring people back together through play. In a world of rising loneliness and endless feeds, we offer a simpler, more joyful alternative.
+              </p>
+              <p>
+                <span className="font-bold text-[#FCEA10]">Democratizing play for everyone.</span><br />
+                150+ of the world's best social games — free & ad-free, in 16 languages. Pay what you want (or nothing): joy isn't locked behind paywalls, and everything is designed for less screen time and more laughter.
+              </p>
+              <p>
+                <span className="font-bold text-[#FCEA10]">The world's largest offline play movement.</span><br />
+                Millions across 150+ countries are choosing less scrolling and more living—building real belonging and community.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* COMMUNITY CTA */}
+        <section id="play" className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">Join the Offline Revolution</h2>
+            <p className="text-muted-foreground">
+              The best moments aren't on a feed — they're around you.<br />
+              Millions have already made the switch. It's your turn.
+            </p>
+            <div className="flex items-center gap-4 flex-wrap">
+              <StoreBadges />
+            </div>
+          </div>
+          <figure className="rounded-2xl border shadow-sm p-4 bg-card">
+            <video
+              src="/looped-video-bottom.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster="/video-thumb.jpg"
+              controls={false}
+              disablePictureInPicture
+              controlsList="nodownload nofullscreen noremoteplayback"
+              className="w-full h-64 object-cover rounded-xl shadow-lg pointer-events-none select-none [&::-webkit-media-controls]:hidden [&::-webkit-media-controls-panel]:hidden [&::-webkit-media-controls-play-button]:hidden [&::-webkit-media-controls-start-playback-button]:hidden"
+              aria-hidden="true"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            <figcaption className="text-sm text-muted-foreground mt-2">
+              The best memories aren't online. Start playing today.
+            </figcaption>
+          </figure>
+        </section>
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      
+
+      
+      {/* FOOTER */}
+      <footer className="footer relative bg-[#FFF845]">
+        {/* Yellow wavy background shape - tiled horizontally */}
+        <div 
+          className="footer-wave absolute left-0 right-0 -top-px h-[100px] z-[3] pointer-events-none"
+        />
+        
+        {/* Footer content */}
+        <div className="relative z-10 text-black pt-20 pb-12">
+          <div className="mx-auto max-w-6xl px-8">
+            <div className="grid grid-cols-3 gap-12 items-start">
+              
+              {/* Left column - Legal links */}
+              <div className="space-y-8">
+                <a 
+                  href="https://pocketparty.app/terms-of-service" 
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-lg font-medium hover:underline"
+                >
+                  Terms & Conditions
+                </a>
+                <a 
+                  href="https://pocketparty.app/privacy-policy" 
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-lg font-medium hover:underline"
+                >
+                  Privacy Policy
+                </a>
+              </div>
+              
+              {/* Center column - Contact */}
+              <div className="space-y-6">
+                <p className="text-lg font-medium">Say hi 👋</p>
+                <Link 
+                  href="mailto:hey@pocketparty.app" 
+                  className="block text-lg font-medium underline hover:no-underline"
+                >
+                  hey@pocketparty.app
+                </Link>
+              </div>
+              
+              {/* Right column - Social media */}
+              <div className="footer-right text-right">
+                <h3 className="follow-title">Follow us for more</h3>
+                
+                {/* Sub-caption */}
+                <p className="mt-1 text-sm md:text-base text-black/70 mb-6">
+                  Join 1.4M followers on social
+                </p>
+                
+                <div className="social-row justify-end">
+                  <a 
+                    href="https://www.instagram.com/pocketpartyapp/" 
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      group relative inline-flex items-center justify-center
+                      transition-transform duration-200 ease-out
+                      hover:scale-[1.16] focus-visible:scale-[1.16]
+                      outline-none
+                      motion-reduce:transition-none
+                    "
+                  >
+                    {/* Glow overlay */}
+                    <span
+                      className="
+                        absolute inset-0 rounded-full
+                        bg-purple-500/40 blur-[16px]
+                        opacity-0 transition-opacity duration-200
+                        group-hover:opacity-100 group-focus-visible:opacity-100
+                        pointer-events-none
+                      "
+                      aria-hidden="true"
+                    />
+                    <img className="social-icon relative z-10" src="/Insta.svg" alt="Instagram" />
+                  </a>
+                  <a 
+                    href="https://www.tiktok.com/@pocketparty.app" 
+                    aria-label="TikTok"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      group relative inline-flex items-center justify-center
+                      transition-transform duration-200 ease-out
+                      hover:scale-[1.16] focus-visible:scale-[1.16]
+                      outline-none
+                      motion-reduce:transition-none
+                    "
+                  >
+                    {/* Glow overlay */}
+                    <span
+                      className="
+                        absolute inset-0 rounded-full
+                        bg-purple-500/40 blur-[16px]
+                        opacity-0 transition-opacity duration-200
+                        group-hover:opacity-100 group-focus-visible:opacity-100
+                        pointer-events-none
+                      "
+                      aria-hidden="true"
+                    />
+                    <img className="social-icon relative z-10" src="/TT.svg" alt="TikTok" />
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/PocketPartyApp/" 
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      group relative inline-flex items-center justify-center
+                      transition-transform duration-200 ease-out
+                      hover:scale-[1.16] focus-visible:scale-[1.16]
+                      outline-none
+                      motion-reduce:transition-none
+                    "
+                  >
+                    {/* Glow overlay */}
+                    <span
+                      className="
+                        absolute inset-0 rounded-full
+                        bg-purple-500/40 blur-[16px]
+                        opacity-0 transition-opacity duration-200
+                        group-hover:opacity-100 group-focus-visible:opacity-100
+                        pointer-events-none
+                      "
+                      aria-hidden="true"
+                    />
+                    <img className="social-icon relative z-10" src="/FB.svg" alt="Facebook" />
+                  </a>
+                  <a 
+                    href="https://www.youtube.com/@pocketpartyapp" 
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      group relative inline-flex items-center justify-center
+                      transition-transform duration-200 ease-out
+                      hover:scale-[1.16] focus-visible:scale-[1.16]
+                      outline-none
+                      motion-reduce:transition-none
+                    "
+                  >
+                    {/* Glow overlay */}
+                    <span
+                      className="
+                        absolute inset-0 rounded-full
+                        bg-purple-500/40 blur-[16px]
+                        opacity-0 transition-opacity duration-200
+                        group-hover:opacity-100 group-focus-visible:opacity-100
+                        pointer-events-none
+                      "
+                      aria-hidden="true"
+                    />
+                    <img className="social-icon relative z-10" src="/YT.svg" alt="YouTube" />
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+            
+            {/* Copyright centered at bottom */}
+            <div className="text-center mt-16">
+              <p className="text-lg">© Pocket Party {currentYear}</p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
