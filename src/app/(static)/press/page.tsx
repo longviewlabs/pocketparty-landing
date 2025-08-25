@@ -47,7 +47,7 @@ export default function PressPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
-                  Pocket Party: the world's largest offline social play movement
+                  Pocket Party: the world&apos;s largest offline social play movement
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                   150+ free, ad-free games built to spark laughter and real connection — played by millions across 150+ countries.
@@ -162,7 +162,7 @@ export default function PressPage() {
             <Card className="bg-white/10 border-white/20">
               <CardContent className="p-8 md:p-12">
                 <blockquote className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-6">
-                  "We obsess over delivering the best possible IRL experience—ten times better than anything else—so putting our games in everyone's hands for free was the only choice that made sense."
+                  &quot;We obsess over delivering the best possible IRL experience—ten times better than anything else—so putting our games in everyone&apos;s hands for free was the only choice that made sense.&quot;
                 </blockquote>
                 <cite className="text-[#FFF845] font-bold text-lg">
                   — Julian Stewart, Founder & CEO

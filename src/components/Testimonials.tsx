@@ -87,7 +87,7 @@ function TestimonialCard({ testimonial, index, activeIndex, totalCards }: Testim
       <div className="space-y-4 h-full">
         <Quote className="h-6 w-6 text-[#FFF845] opacity-70" />
         <blockquote className={`${testimonial.featured ? 'text-base md:text-lg' : 'text-sm md:text-base'} leading-relaxed max-w-[60ch] text-black`}>
-          "{testimonial.quote}"
+          &quot;{testimonial.quote}&quot;
         </blockquote>
         <footer className="text-xs text-black/70">
           <div className="font-medium">{testimonial.author}</div>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Users, Globe } from "lucide-react";
-import Logo from "@/components/Logo";
+
 import StoreBadges from "@/components/StoreBadges";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
@@ -20,10 +19,10 @@ export default function Home() {
         <section className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#FFF845] font-extrabold">The world's best social games</span> <span className="italic">— in your pocket, free forever.</span>
+              <span className="text-[#FFF845] font-extrabold">The world&apos;s best social games</span> <span className="italic">— in your pocket, free forever.</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              150+ free games and activities — powering the world's largest offline social play movement for real connection.
+              150+ free games and activities — powering the world&apos;s largest offline social play movement for real connection.
             </p>
             <div id="download">
               <StoreBadges />
@@ -84,15 +83,15 @@ export default function Home() {
             {/* Right column: Mission copy */}
             <div className="space-y-8 text-base md:text-lg leading-relaxed">
               <p>
-                <span className="font-bold text-[#FCEA10]">Scrolling isn't connection.</span><br />
+                <span className="font-bold text-[#FCEA10]">Scrolling isn&apos;t connection.</span><br />
                 We built Pocket Party to bring people back together through play. In a world of rising loneliness and endless feeds, we offer a simpler, more joyful alternative.
               </p>
               <p>
                 <span className="font-bold text-[#FCEA10]">Democratizing play for everyone.</span><br />
-                150+ of the world's best social games — free & ad-free, in 16 languages. Pay what you want (or nothing): joy isn't locked behind paywalls, and everything is designed for less screen time and more laughter.
+                150+ of the world&apos;s best social games — free & ad-free, in 16 languages. Pay what you want (or nothing): joy isn&apos;t locked behind paywalls, and everything is designed for less screen time and more laughter.
               </p>
               <p>
-                <span className="font-bold text-[#FCEA10]">The world's largest offline play movement.</span><br />
+                <span className="font-bold text-[#FCEA10]">The world&apos;s largest offline play movement.</span><br />
                 Millions across 150+ countries are choosing less scrolling and more living—building real belonging and community.
               </p>
             </div>
@@ -104,8 +103,8 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">Join the Offline Revolution</h2>
             <p className="text-muted-foreground">
-              The best moments aren't on a feed — they're around you.<br />
-              Millions have already made the switch. It's your turn.
+              The best moments aren&apos;t on a feed — they&apos;re around you.<br />
+              Millions have already made the switch. It&apos;s your turn.
             </p>
             <div className="flex items-center gap-4 flex-wrap">
               <StoreBadges />
@@ -127,7 +126,7 @@ export default function Home() {
               aria-hidden="true"
             />
             <figcaption className="text-sm text-muted-foreground mt-2">
-              The best memories aren't online. Start playing today.
+              The best memories aren&apos;t online. Start playing today.
             </figcaption>
           </figure>
         </section>
@@ -213,7 +212,7 @@ export default function Home() {
                       "
                       aria-hidden="true"
                     />
-                    <img className="social-icon relative z-10" src="/Insta.svg" alt="Instagram" />
+                    <Image className="social-icon relative z-10" src="/Insta.svg" alt="Instagram" width={24} height={24} />
                   </a>
                   <a 
                     href="https://www.tiktok.com/@pocketparty.app" 
@@ -239,7 +238,7 @@ export default function Home() {
                       "
                       aria-hidden="true"
                     />
-                    <img className="social-icon relative z-10" src="/TT.svg" alt="TikTok" />
+                    <Image className="social-icon relative z-10" src="/TT.svg" alt="TikTok" width={24} height={24} />
                   </a>
                   <a 
                     href="https://www.facebook.com/PocketPartyApp/" 
@@ -265,7 +264,7 @@ export default function Home() {
                       "
                       aria-hidden="true"
                     />
-                    <img className="social-icon relative z-10" src="/FB.svg" alt="Facebook" />
+                    <Image className="social-icon relative z-10" src="/FB.svg" alt="Facebook" width={24} height={24} />
                   </a>
                   <a 
                     href="https://www.youtube.com/@pocketpartyapp" 
@@ -291,7 +290,7 @@ export default function Home() {
                       "
                       aria-hidden="true"
                     />
-                    <img className="social-icon relative z-10" src="/YT.svg" alt="YouTube" />
+                    <Image className="social-icon relative z-10" src="/YT.svg" alt="YouTube" width={24} height={24} />
                   </a>
                 </div>
               </div>
