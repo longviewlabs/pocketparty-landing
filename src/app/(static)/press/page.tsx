@@ -58,7 +58,11 @@ export default function PressPage() {
                     size="lg"
                     className="bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-8 py-3"
                   >
-                    <a href="/press/kit.zip" className="flex items-center gap-2">
+                    <a 
+                      href="/PocketParty-PressKit-2025.zip" 
+                      download
+                      className="flex items-center gap-2"
+                    >
                       <Download className="w-5 h-5" />
                       Download Press Kit
                     </a>
