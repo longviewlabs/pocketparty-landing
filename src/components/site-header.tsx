@@ -18,9 +18,7 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    const sections = [
-      { id: "about", key: "about" },
-    ];
+    const sections = [{ id: "about", key: "about" }];
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -43,13 +41,13 @@ export function SiteHeader() {
   const NavLinks = () => (
     <ul className="flex items-center gap-6">
       <li>
-                  <a
-            href="#about"
-            aria-current={active === "about" ? "page" : undefined}
-            className="text-base text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring rounded px-2 py-1"
-          >
-            About
-          </a>
+        <Link
+          href="/#about"
+          aria-current={active === "about" ? "page" : undefined}
+          className="text-base text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring rounded px-2 py-1"
+        >
+          About
+        </Link>
       </li>
 
       <li>
@@ -69,16 +67,32 @@ export function SiteHeader() {
       className="sticky top-0 z-50 border-b backdrop-blur bg-background/70 data-[scrolled=true]:bg-background"
       data-scrolled={scrolled}
     >
-      <nav aria-label="Primary" className="mx-auto max-w-6xl px-4 h-[70px] flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" aria-label="Pocket Party Home">
+      <nav
+        aria-label="Primary"
+        className="mx-auto max-w-6xl px-4 h-[70px] flex items-center justify-between"
+      >
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          aria-label="Pocket Party Home"
+        >
           <Logo />
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
           <NavLinks />
-                              <a href="https://game.pocketparty.app/" target="_blank" rel="noreferrer">
-                      <Button size="default" className="bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-2">Play Now</Button>
-                    </a>
+          <a
+            href="https://game.pocketparty.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button
+              size="default"
+              className="bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-2"
+            >
+              Play Now
+            </Button>
+          </a>
         </div>
 
         <button
@@ -104,13 +118,32 @@ export function SiteHeader() {
           >
             <div className="text-sm font-medium">Menu</div>
             <div className="flex flex-col gap-4">
-              <a href="#about" className="text-base py-1" onClick={() => setOpen(false)}>About</a>
+              <a
+                href="#about"
+                className="text-base py-1"
+                onClick={() => setOpen(false)}
+              >
+                About
+              </a>
 
-              <Link href="/press" className="text-base py-1" onClick={() => setOpen(false)}>Press</Link>
+              <Link
+                href="/press"
+                className="text-base py-1"
+                onClick={() => setOpen(false)}
+              >
+                Press
+              </Link>
             </div>
             <div className="mt-auto">
-              <a href="https://game.pocketparty.app/" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
-                <Button className="w-full bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-3">Play Now</Button>
+              <a
+                href="https://game.pocketparty.app/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+              >
+                <Button className="w-full bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-3">
+                  Play Now
+                </Button>
               </a>
             </div>
           </div>
@@ -120,8 +153,14 @@ export function SiteHeader() {
       {/* Mobile sticky bottom CTA */}
       <div className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 p-3 md:hidden">
         <div className="mx-auto max-w-6xl px-4">
-          <a href="https://game.pocketparty.app/" target="_blank" rel="noreferrer">
-            <Button className="w-full bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-3">Play Now</Button>
+          <a
+            href="https://game.pocketparty.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="w-full bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-3">
+              Play Now
+            </Button>
           </a>
         </div>
       </div>
@@ -130,5 +169,3 @@ export function SiteHeader() {
 }
 
 export default SiteHeader;
-
-
