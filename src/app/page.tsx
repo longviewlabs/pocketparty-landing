@@ -139,11 +139,11 @@ export default function Home() {
       <footer className="footer relative bg-[#FFF845]">
         {/* Yellow wavy background shape - tiled horizontally */}
         <div 
-          className="footer-wave absolute left-0 right-0 -top-px h-[100px] z-[3] pointer-events-none"
+          className="footer-wave"
         />
         
         {/* Footer content */}
-        <div className="relative z-10 text-black pt-20 pb-12">
+        <div className="absolute top-14 left-0 right-0 h-max w-full bg-[#FFF845] z-10 text-black pt-20 pb-12">
           <div className="mx-auto max-w-6xl px-8">
             <div className="grid grid-cols-3 gap-12 items-start">
               
