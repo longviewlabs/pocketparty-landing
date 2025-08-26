@@ -24,10 +24,11 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">
               150+ free games and activities — powering the world&apos;s largest offline social play movement for real connection.
             </p>
-            <div id="download">
+            {/* Desktop: Show badges and pills here */}
+            <div className="hidden md:block" id="download">
               <StoreBadges />
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="hidden md:flex flex-wrap gap-3">
               <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
                 1.4M+ followers
               </Pill>
@@ -39,7 +40,26 @@ export default function Home() {
               </Pill>
             </div>
           </div>
-          <HeroVideo />
+          <div className="space-y-6">
+            <HeroVideo />
+            {/* Mobile: Show badges and pills under the video */}
+            <div className="md:hidden space-y-4">
+              <div id="download-mobile">
+                <StoreBadges />
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
+                  1.4M+ followers
+                </Pill>
+                <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
+                  150+ games
+                </Pill>
+                <Pill icon={<svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}>
+                  16 languages
+                </Pill>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* BENEFITS */}
@@ -88,11 +108,11 @@ export default function Home() {
               </p>
               <p>
                 <span className="font-bold text-[#FCEA10]">Democratizing play for everyone.</span><br />
-                150+ of the world&apos;s best social games — free & ad-free, in 16 languages. Pay what you want (or nothing): joy isn&apos;t locked behind paywalls, and everything is designed for less screen time and more laughter.
+                150+ of the world&apos;s best social games — free & ad-free, in 16 languages. Play instantly on web or app, no downloads or equipment required. Joy isn&apos;t locked behind paywalls, and everything is designed for less screen time and more laughter.
               </p>
               <p>
                 <span className="font-bold text-[#FCEA10]">The world&apos;s largest offline play movement.</span><br />
-                Millions across 150+ countries are choosing less scrolling and more living—building real belonging and community.
+                Millions across 150+ countries are choosing less scrolling and more living. By making play free and accessible to anyone, anywhere, Pocket Party is fueling a global shift toward real connection, belonging, and community.
               </p>
             </div>
           </div>
@@ -143,12 +163,13 @@ export default function Home() {
         />
         
         {/* Footer content */}
-        <div className="absolute top-14 left-0 right-0 h-max w-full bg-[#FFF845] z-10 text-black pt-20 pb-12">
-          <div className="mx-auto max-w-6xl px-8">
-            <div className="grid grid-cols-3 gap-12 items-start">
+        <div className="absolute top-14 left-0 right-0 h-max w-full bg-[#FFF845] z-10 text-black pt-20 pb-28 md:pb-12">
+          <div className="mx-auto max-w-6xl px-4 sm:px-8">
+            {/* Mobile: Stack vertically, Desktop: 3 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start">
               
               {/* Left column - Legal links */}
-              <div className="space-y-8">
+              <div className="space-y-3 md:space-y-4 text-center md:text-left">
                 <a 
                   href="https://pocketparty.app/terms-of-service" 
                   target="_blank"
@@ -168,7 +189,7 @@ export default function Home() {
               </div>
               
               {/* Center column - Contact */}
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6 text-center">
                 <p className="text-lg font-medium">Say hi 👋</p>
                 <Link 
                   href="mailto:hey@pocketparty.app" 
@@ -179,15 +200,15 @@ export default function Home() {
               </div>
               
               {/* Right column - Social media */}
-              <div className="footer-right text-right">
+              <div className="text-center md:text-right space-y-4">
                 <h3 className="follow-title">Follow us for more</h3>
                 
                 {/* Sub-caption */}
-                <p className="mt-1 text-sm md:text-base text-black/70 mb-6">
+                <p className="text-sm md:text-base text-black/70 mb-4 md:mb-6">
                   Join 1.4M followers on social
                 </p>
                 
-                <div className="social-row justify-end">
+                <div className="social-row justify-center md:justify-end">
                   <a 
                     href="https://www.instagram.com/pocketpartyapp/" 
                     aria-label="Instagram"
@@ -298,7 +319,7 @@ export default function Home() {
             </div>
             
             {/* Copyright centered at bottom */}
-            <div className="text-center mt-16">
+            <div className="text-center mt-12 md:mt-16">
               <p className="text-lg">© Pocket Party {currentYear}</p>
             </div>
           </div>

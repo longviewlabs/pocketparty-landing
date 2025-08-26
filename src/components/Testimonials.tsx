@@ -100,7 +100,8 @@ function TestimonialCard({ testimonial, index, activeIndex, totalCards }: Testim
 export function Testimonials() {
   // Find featured testimonial index to start with it centered
   const featuredIndex = testimonials.findIndex(t => t.featured);
-  const [activeIndex, setActiveIndex] = useState(featuredIndex !== -1 ? featuredIndex : 0);
+  const [activeIndex, setActiveIndex] = useState(featuredIndex >= 0 ? featuredIndex : 0);
+  const [isClient, setIsClient] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
 
   // Handle window resize
@@ -111,6 +112,11 @@ export function Testimonials() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Prevent hydration mismatch by only rendering transform after client mount
+  useEffect(() => {
+    setIsClient(true);
   }, []);
 
   const goToPrevious = () => {
@@ -136,8 +142,13 @@ export function Testimonials() {
   };
 
   return (
-    <section id="stories" aria-labelledby="testimonials-heading" className="space-y-8">
-      <div className="text-center space-y-2">
+    <section 
+      id="testimonials" 
+      className="mx-auto max-w-6xl px-4 md:px-6 scroll-mt-24"
+      aria-labelledby="testimonials-heading"
+    >
+      {/* Section Header */}
+      <div className="text-center space-y-2 mb-12">
         <h2 id="testimonials-heading" className="text-2xl md:text-3xl font-extrabold tracking-tight">
           What our users are saying
         </h2>
@@ -154,9 +165,9 @@ export function Testimonials() {
             {/* Rail */}
             <div 
               className="flex gap-4 md:gap-6 items-stretch transition-transform duration-300 ease-in-out"
-              style={{
+              style={isClient ? {
                 transform: `translateX(calc(50% - ${activeIndex * (getCardWidth() + getGap()) + getCardWidth() / 2}px))`,
-              }}
+              } : undefined}
             >
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard

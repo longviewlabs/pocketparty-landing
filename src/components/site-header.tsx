@@ -64,7 +64,7 @@ export function SiteHeader() {
   return (
     <header
       role="banner"
-      className="sticky top-0 z-50 border-b backdrop-blur bg-background/70 data-[scrolled=true]:bg-background"
+      className="sticky top-0 z-50 border-b border-white/20 bg-[#9F32E5] shadow-sm"
       data-scrolled={scrolled}
     >
       <nav
@@ -73,7 +73,7 @@ export function SiteHeader() {
       >
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 shrink-0"
           aria-label="Pocket Party Home"
         >
           <Logo />
@@ -97,10 +97,11 @@ export function SiteHeader() {
 
         <button
           aria-label="Open menu"
-          className="md:hidden p-2 rounded focus-visible:outline-2 focus-visible:outline-ring"
+          className="md:hidden inline-flex items-center gap-2 bg-[#FFF845] text-black font-bold rounded-full px-4 py-2 shadow hover:bg-[#FFF845]/90 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
           onClick={() => setOpen(true)}
         >
           <Menu className="h-5 w-5" />
+          <span className="text-sm">Menu</span>
         </button>
       </nav>
 
@@ -111,30 +112,43 @@ export function SiteHeader() {
           className="fixed inset-0 z-50 md:hidden"
           onClick={() => setOpen(false)}
         >
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
           <div
-            className="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-background border-l p-6 flex flex-col gap-6"
+            className="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-background border-l shadow-xl p-6 flex flex-col gap-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="text-sm font-medium">Menu</div>
-            <div className="flex flex-col gap-4">
-              <a
-                href="#about"
-                className="text-base py-1"
+            <div className="flex items-center justify-between">
+              <div className="text-lg font-semibold text-foreground">Menu</div>
+              <button
+                onClick={() => setOpen(false)}
+                className="p-2 rounded-full hover:bg-muted/50 transition-colors"
+                aria-label="Close menu"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <nav className="flex flex-col gap-2">
+              <Link
+                href="/#about"
+                className="text-base py-3 px-2 rounded-lg hover:bg-muted/50 transition-colors"
                 onClick={() => setOpen(false)}
               >
                 About
-              </a>
+              </Link>
 
               <Link
                 href="/press"
-                className="text-base py-1"
+                className="text-base py-3 px-2 rounded-lg hover:bg-muted/50 transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Press
               </Link>
-            </div>
-            <div className="mt-auto">
+            </nav>
+            
+            <div className="mt-auto pt-6 border-t">
               <a
                 href="https://game.pocketparty.app/"
                 target="_blank"
@@ -158,7 +172,7 @@ export function SiteHeader() {
             target="_blank"
             rel="noreferrer"
           >
-            <Button className="w-full bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-3">
+            <Button className="w-full bg-[#FFF845] text-black font-bold hover:bg-[#FFF845]/90 rounded-full px-6 py-3 animate-pulse-gentle">
               Play Now
             </Button>
           </a>

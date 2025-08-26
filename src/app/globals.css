@@ -101,6 +101,9 @@ html { scroll-behavior: smooth; }
   .animate-pulse-flash {
     animation: pulse-flash 1.5s ease-in-out infinite;
   }
+  .animate-pulse-gentle {
+    animation: pulse-gentle 2s ease-in-out infinite;
+  }
 }
 
 @keyframes pulse-glow {
@@ -136,6 +139,57 @@ html { scroll-behavior: smooth; }
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+}
+
+/* HeroRevolution animations */
+@keyframes scanline {
+  0% { 
+    opacity: 0; 
+    transform: scaleX(0); 
+  }
+  50% { 
+    opacity: 0.2; 
+    transform: scaleX(1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: scaleX(1); 
+  }
+}
+
+@keyframes sweep {
+  0% { 
+    transform: translateX(-100%); 
+  }
+  100% { 
+    transform: translateX(100%); 
+  }
+}
+
+@keyframes confetti {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  50% { 
+    opacity: 0.1; 
+    transform: scale(1.1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: scale(1); 
   }
 }
 
@@ -231,12 +285,16 @@ html { scroll-behavior: smooth; }
 
 @media (max-width: 640px) {
   .follow-title {
-    font-size: 16px; /* 25% smaller than 21px (21 * 0.75 = 15.75, rounded to 16) */
+    font-size: 18px; /* Better mobile readability */
   }
   
   .social-icon {
-    width: 34px; /* 40% bigger than 24px (24 * 1.4 = 34) */
-    height: 34px; /* 40% bigger than 24px */
+    width: 38px; /* Slightly smaller for mobile but still touch-friendly */
+    height: 38px;
+  }
+  
+  .social-row {
+    gap: 12px; /* Tighter spacing on mobile */
   }
 }
 

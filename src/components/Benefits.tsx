@@ -13,11 +13,11 @@ export function Benefits() {
                     {/* Benefit 1: Create real connection */}
                     <div className="space-y-4 md:pr-8">
                       <div className="flex items-center gap-4">
-                        <div className="relative shrink-0 rounded-full overflow-hidden ring-2 ring-[#FFF845]/50 shadow-sm h-20 w-20 md:h-24 md:w-24">
+                        <div className="relative shrink-0 rounded-full overflow-hidden ring-2 ring-[#FFF845]/50 shadow-sm h-20 w-20 md:h-24 md:w-24 transition-all duration-300 ease-out hover:scale-110 hover:ring-[#FFF845] hover:shadow-lg hover:shadow-[#FFF845]/25">
                           <Image
                             src="/create-real-connection.jpg"
                             alt="People laughing and connecting through real-life social activities"
-                            className="h-full w-full object-cover pointer-events-none select-none"
+                            className="h-full w-full object-cover pointer-events-none select-none transition-transform duration-300 ease-out hover:scale-105"
                             width={96}
                             height={96}
                           />
@@ -32,11 +32,11 @@ export function Benefits() {
                     {/* Benefit 2: Make fun effortless */}
                     <div className="space-y-4 md:px-8">
                       <div className="flex items-center gap-4">
-                        <div className="relative shrink-0 rounded-full overflow-hidden ring-2 ring-[#FFF845]/50 shadow-sm h-20 w-20 md:h-24 md:w-24">
+                        <div className="relative shrink-0 rounded-full overflow-hidden ring-2 ring-[#FFF845]/50 shadow-sm h-20 w-20 md:h-24 md:w-24 transition-all duration-300 ease-out hover:scale-110 hover:ring-[#FFF845] hover:shadow-lg hover:shadow-[#FFF845]/25">
                           <Image
                             src="/make-fun-effortless.jpg"
                             alt="Friends easily joining games together without complicated setup"
-                            className="h-full w-full object-cover pointer-events-none select-none"
+                            className="h-full w-full object-cover pointer-events-none select-none transition-transform duration-300 ease-out hover:scale-105"
                             width={96}
                             height={96}
                           />
@@ -51,11 +51,11 @@ export function Benefits() {
                     {/* Benefit 3: Join the offline movement */}
                     <div className="space-y-4 md:pl-8">
                       <div className="flex items-center gap-4">
-                        <div className="relative shrink-0 rounded-full overflow-hidden ring-2 ring-[#FFF845]/50 shadow-sm h-20 w-20 md:h-24 md:w-24">
+                        <div className="relative shrink-0 rounded-full overflow-hidden ring-2 ring-[#FFF845]/50 shadow-sm h-20 w-20 md:h-24 md:w-24 transition-all duration-300 ease-out hover:scale-110 hover:ring-[#FFF845] hover:shadow-lg hover:shadow-[#FFF845]/25">
                           <Image
                             src="/Join-movement.jpg"
                             alt="Group of people choosing offline activities over digital screens"
-                            className="h-full w-full object-cover pointer-events-none select-none"
+                            className="h-full w-full object-cover pointer-events-none select-none transition-transform duration-300 ease-out hover:scale-105"
                             width={96}
                             height={96}
                           />
