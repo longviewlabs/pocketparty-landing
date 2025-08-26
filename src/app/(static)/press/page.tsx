@@ -140,10 +140,7 @@ export default function PressPage() {
               {[
                 { stat: "+1.5m", label: "Downloads" },
                 { stat: "+250m", label: "Organic video views" },
-                { stat: "10 min", label: "Avg session duration" },
-                { stat: "~55k", label: "MAUs" },
                 { stat: "+1.4m", label: "Social followers" },
-                { stat: "+700k", label: "Email list" },
               ].map((item, index) => (
                 <Card key={index} className="bg-white/10 border-white/20 text-center">
                   <CardContent className="p-6">
