@@ -29,7 +29,7 @@ export function HeroRevolution({
   const [reducedMotion, setReducedMotion] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollOffset = useRef(0);
-  const animationFrame = useRef<number>();
+  const animationFrame = useRef<number>(0);
 
   // Check for reduced motion preference
   useEffect(() => {
@@ -308,9 +308,9 @@ function HeroLayer({ isVisible, animationState, confetti = false, children }: La
         
         {/* Subtext */}
         <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-          The best moments aren't on a feed — they're around you.
+          The best moments aren&apos;t on a feed — they&apos;re around you.
           <br />
-          Millions have already made the switch. It's your turn.
+          Millions have already made the switch. It&apos;s your turn.
         </p>
         
         {/* CTA Badges with spring animation */}
