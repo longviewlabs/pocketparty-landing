@@ -27,6 +27,10 @@
       {
         "source": "/privacy",
         "destination": "/privacy.html"
+      },
+      {
+        "source": "/links",
+        "destination": "https://game.pocketparty.app/links"
       }
     ]
   }
