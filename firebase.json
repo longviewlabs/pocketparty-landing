@@ -3,6 +3,13 @@
     "site": "pocket-party-landingpage",
     "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/links",
+        "destination": "https://game.pocketparty.app/links",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
@@ -27,10 +34,6 @@
       {
         "source": "/privacy",
         "destination": "/privacy.html"
-      },
-      {
-        "source": "/links",
-        "destination": "https://game.pocketparty.app/links"
       }
     ]
   }
