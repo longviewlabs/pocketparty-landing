@@ -82,7 +82,7 @@ export function SiteHeader() {
         <div className="hidden md:flex items-center gap-6">
           <NavLinks />
           <a
-            href="https://game.pocketparty.app/"
+            href="https://web.pocketparty.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -150,7 +150,7 @@ export function SiteHeader() {
             
             <div className="mt-auto pt-6 border-t">
               <a
-                href="https://game.pocketparty.app/"
+                href="https://web.pocketparty.app/"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setOpen(false)}
@@ -168,7 +168,7 @@ export function SiteHeader() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 p-3 md:hidden">
         <div className="mx-auto max-w-6xl px-4">
           <a
-            href="https://game.pocketparty.app/"
+            href="https://web.pocketparty.app/"
             target="_blank"
             rel="noreferrer"
           >

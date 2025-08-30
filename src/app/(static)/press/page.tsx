@@ -218,7 +218,7 @@ export default function PressPage() {
                     variant="outline"
                     className="w-full justify-start border-white/20 text-white hover:bg-white/10"
                   >
-                    <a href="https://game.pocketparty.app/" target="_blank" rel="noreferrer">
+                    <a href="https://web.pocketparty.app/" target="_blank" rel="noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Play on Web
                     </a>

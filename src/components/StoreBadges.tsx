@@ -41,7 +41,7 @@ export function StoreBadges() {
         />
       </Link>
       <Link
-        href="https://game.pocketparty.app/"
+        href="https://web.pocketparty.app/"
         prefetch={false}
         className="inline-block transition-all duration-300 ease-out hover:scale-110 hover:shadow-lg hover:shadow-[#FFF845]/25"
         rel="nofollow"
