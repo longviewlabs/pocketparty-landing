@@ -8,6 +8,16 @@
         "source": "/links",
         "destination": "https://game.pocketparty.app/links",
         "type": 301
+      },
+      {
+        "source": "/terms-of-service",
+        "destination": "https://game.pocketparty.app/terms-of-service",
+        "type": 301
+      },
+      {
+        "source": "/privacy-policy",
+        "destination": "https://game.pocketparty.app/privacy-policy",
+        "type": 301
       }
     ],
     "rewrites": [
