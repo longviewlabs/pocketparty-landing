@@ -1,0 +1,23 @@
+# Robots.txt for Pocket Party
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://pocketparty.app/sitemap.xml
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

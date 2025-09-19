@@ -1,18 +1,39 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Pocket Party - Real-Life Connection Through Games",
+  description:
+    "Learn about Pocket Party's mission to bring people together through 150+ free, ad-free social games. Discover how we make gatherings effortless and fun.",
+  openGraph: {
+    title: "About Pocket Party - Real-Life Connection Through Games",
+    description:
+      "Learn about Pocket Party's mission to bring people together through 150+ free, ad-free social games. Discover how we make gatherings effortless and fun.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Pocket Party - Real-Life Connection Through Games",
+    description:
+      "Learn about Pocket Party's mission to bring people together through 150+ free, ad-free social games. Discover how we make gatherings effortless and fun.",
+  },
+};
 
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-16 space-y-4">
       <h1 className="text-3xl font-bold">About</h1>
       <p className="text-muted-foreground">
-        Pocket Party is a playful platform designed to make gatherings effortless and fun.
+        Pocket Party is a playful platform designed to make gatherings
+        effortless and fun.
       </p>
       <p className="text-muted-foreground">
-        Our mission is simple: bring people together with fast, accessible games on any phone.
+        Our mission is simple: bring people together with fast, accessible games
+        on any phone.
       </p>
-      <Link className="underline" href="/">Back to home</Link>
+      <Link className="underline" href="/">
+        Back to home
+      </Link>
     </main>
   );
 }
-
-
