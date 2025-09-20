@@ -1,0 +1,25 @@
+{
+  "name": "Pocket Party - Social Games for Real-Life Fun",
+  "short_name": "Pocket Party",
+  "description": "150+ social games to connect friends, families, and teams offline. Free, ad-free, and trusted by 1.4M+ players worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#9F32E5",
+  "theme_color": "#9F32E5",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "games", "social"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/pocket-party-logo-wide.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
