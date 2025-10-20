@@ -5,6 +5,11 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
+        "source": "/game/:splat",
+        "destination": "https://web.pocketparty.app/game/:splat",
+        "type": 301
+      },
+      {
         "source": "/links",
         "destination": "https://game.pocketparty.app/links",
         "type": 301
