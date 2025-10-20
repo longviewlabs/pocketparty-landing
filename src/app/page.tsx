@@ -19,7 +19,7 @@ export default function Home() {
         <section className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#FFF845] font-extrabold">The world&apos;s best social games</span> <span className="italic">— in your pocket, free forever.</span>
+              <span className="text-[#FFF845] font-extrabold">The world&apos;s best social games</span> <span className="italic">— all in one app.</span>
             </h1>
             <p className="text-lg text-muted-foreground">
               150+ free games and activities — powering the world&apos;s largest offline social play movement for real connection.
